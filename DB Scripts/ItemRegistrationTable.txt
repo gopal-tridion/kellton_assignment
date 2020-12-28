@@ -1,0 +1,6 @@
+CREATE TABLE ItemRegistration (
+  itemId              INT           NOT NULL    IDENTITY    PRIMARY KEY,
+  itemName           VARCHAR(100)  NOT NULL,
+  itemRate           INT  NOT NULL,
+  itemQty INT NOT NULL
+);

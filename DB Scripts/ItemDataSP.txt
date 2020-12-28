@@ -1,0 +1,39 @@
+ALTER PROCEDURE [dbo].[ItemDataInsertUpdateDelete] ( 
+										@itemId INT,
+                                        @itemName VARCHAR(100),  
+										@itemRate     INT,  
+										@itemQty     INT, 
+                                        @StatementType NVARCHAR(20) = ''
+										)  
+AS  
+  BEGIN  
+      IF @StatementType = 'Insert'  
+        BEGIN  
+            INSERT INTO ItemRegistration  
+                        ( 
+                         itemName,  
+                         itemRate,  
+                         itemQty  
+						 )  
+            VALUES     (  
+                         @itemName,  
+                         @itemRate, 
+                         @itemQty  
+						 )
+        END  
+  
+  
+      IF @StatementType = 'Update'  
+        BEGIN  
+            UPDATE ItemRegistration  
+            SET    itemName = @itemName,  
+                   itemRate = @itemRate,  
+                   itemQty = @itemQty
+            WHERE  itemId = @itemId 
+        END  
+      ELSE IF @StatementType = 'Delete'  
+        BEGIN  
+            DELETE FROM ItemRegistration  
+            WHERE  itemId = @itemId
+        END  
+  END

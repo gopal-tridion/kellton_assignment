@@ -1,0 +1,47 @@
+ALTER PROCEDURE [dbo].[UserDataInsertUpdateDelete] (  
+                                          @firstName nvarchar(50),  
+										@lastName     nvarchar(50),  
+										@userName        nvarchar(50),  
+										@password         nvarchar(50),  
+										@phone nvarchar(50),  
+                                        @StatementType NVARCHAR(20) = '')  
+AS  
+  BEGIN  
+      IF @StatementType = 'Insert'  
+        BEGIN  
+            INSERT INTO UserRegistration  
+                        ( 
+                         firstName,  
+                         lastName,  
+                         userName,  
+                         [password],
+						 phone)  
+            VALUES     (  
+                         @firstName,  
+                         @lastName, 
+                         @userName,  
+                         @password, 
+						 @phone
+						 )
+        END  
+  
+      IF @StatementType = 'LoginCheck'  
+        BEGIN  
+            select * from UserRegistration where userName=@userName and [password]=@password  
+        END  
+  
+      IF @StatementType = 'Update'  
+        BEGIN  
+            UPDATE UserRegistration  
+            SET    firstName = @firstName,  
+                   lastName = @lastName,  
+                   userName = @userName,
+				   phone = @phone 
+            WHERE  userName = @userName 
+        END  
+      ELSE IF @StatementType = 'Delete'  
+        BEGIN  
+            DELETE FROM UserRegistration  
+            WHERE  userName = @userName  
+        END  
+  END
