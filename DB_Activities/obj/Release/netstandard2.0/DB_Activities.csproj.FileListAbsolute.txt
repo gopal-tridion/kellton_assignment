@@ -1,0 +1,8 @@
+C:\Users\gopalakrishna.s\source\repos\CoreServices\DB_Activities\bin\Release\netstandard2.0\DB_Activities.deps.json
+C:\Users\gopalakrishna.s\source\repos\CoreServices\DB_Activities\bin\Release\netstandard2.0\DB_Activities.dll
+C:\Users\gopalakrishna.s\source\repos\CoreServices\DB_Activities\bin\Release\netstandard2.0\DB_Activities.pdb
+C:\Users\gopalakrishna.s\source\repos\CoreServices\DB_Activities\obj\Release\netstandard2.0\DB_Activities.AssemblyInfoInputs.cache
+C:\Users\gopalakrishna.s\source\repos\CoreServices\DB_Activities\obj\Release\netstandard2.0\DB_Activities.AssemblyInfo.cs
+C:\Users\gopalakrishna.s\source\repos\CoreServices\DB_Activities\obj\Release\netstandard2.0\DB_Activities.csproj.CoreCompileInputs.cache
+C:\Users\gopalakrishna.s\source\repos\CoreServices\DB_Activities\obj\Release\netstandard2.0\DB_Activities.dll
+C:\Users\gopalakrishna.s\source\repos\CoreServices\DB_Activities\obj\Release\netstandard2.0\DB_Activities.pdb
